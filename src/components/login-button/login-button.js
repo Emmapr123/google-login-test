@@ -3,9 +3,11 @@ import { GoogleLogin } from 'react-google-login';
 
 const clientId = '352290173564-okpkhguvofsdpo5nsc6esu5u3epgkioh.apps.googleusercontent.com';
 
-const LoginButton = () => {
+const LoginButton = ({setLogin}) => {
+
     const onSucces = (result) => {
         console.log('[Login succes] current user: ', result.profileObj)
+        setLogin(true)
     }
 
     const onFailure = (result) => {
