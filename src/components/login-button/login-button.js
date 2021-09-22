@@ -6,6 +6,11 @@ const clientId = '352290173564-okpkhguvofsdpo5nsc6esu5u3epgkioh.apps.googleuserc
 const LoginButton = () => {
     const onSucces = (result) => {
         console.log('[Login succes] current user: ', result.profileObj)
+        return(
+            <div>
+                <p>Login succesfull {result.profileObj}</p>
+            </div>
+        )
     }
 
     const onFailure = (result) => {
